@@ -1,4 +1,4 @@
-package ncb;
+package app.ncb;
 
 public class Ncb {
 
