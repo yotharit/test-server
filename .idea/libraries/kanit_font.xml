@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="kanit-font">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/font/kanit-font.jar!/" />
-    </SOURCES>
-  </library>
-</component>

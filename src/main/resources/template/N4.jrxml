@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="N4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46cdeda3-d596-4258-a7de-5123909b8a58">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="net.sf.jasperreports.export.pdf.glyph.renderer.blocks.x" value="thai"/>
+	<style name="ITTP" fontName="Kanit"/>
+	<parameter name="imageUrl" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address1" class="java.lang.String"/>
+	<parameter name="address2" class="java.lang.String"/>
+	<parameter name="reportMonth" class="java.lang.String"/>
+	<parameter name="reportDate" class="java.lang.String"/>
+	<parameter name="reportYear" class="java.lang.String"/>
+	<parameter name="reportId" class="java.lang.String"/>
+	<parameter name="loanDate" class="java.lang.String"/>
+	<parameter name="loanMonth" class="java.lang.String"/>
+	<parameter name="loanYear" class="java.lang.String"/>
+	<parameter name="totalPayment" class="java.lang.Double"/>
+	<parameter name="indeptDay" class="java.lang.Integer"/>
+	<parameter name="fromDate" class="java.lang.String"/>
+	<parameter name="fromMonth" class="java.lang.String"/>
+	<parameter name="fromYear" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="215" y="16" width="160" height="50" uuid="babc6dc5-b2eb-4da0-8462-8376affdfe13"/>
+				<imageExpression><![CDATA[$P{imageUrl}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement style="ITTP" x="40" y="0" width="250" height="50" uuid="654d5cbc-7f55-484b-96b0-585c2de3e75d"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["กรุณาส่ง\n" + $P{address1} + "\n" + $P{address2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="ITTP" x="328" y="50" width="180" height="19" uuid="bfc1162b-d1fa-4556-8105-f9b25ab8a0b5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["วันที่ " + $P{reportDate} + " " + $P{reportMonth} + " " + $P{reportYear}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement key="" style="ITTP" x="40" y="10" width="290" height="30" uuid="f89c229d-2e7a-4aff-9ff0-1606ec170dae"/>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["เรื่อง    	ขอแจ้งยอดเงินค้างชำระ\nอ้างถึง	สินเชื่อนาโนไฟแนนซ์ บริษัท ไอทีทีพี จำกัด "]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="213" splitType="Stretch">
+			<textField>
+				<reportElement style="ITTP" x="40" y="40" width="488" height="140" uuid="f32dae6b-d994-4856-9a5a-c9a8df7e17f2"/>
+				<textFieldExpression><![CDATA["\tเนื่องด้วยท่านได้กู้เงินสินเชื่อส่วนบุคคล บริษัท ไอทีทีพี จำกัด รายละเอียดปรากฏตามสัญญาเลขที่ " + $P{reportId} + "ฉบับลงวันที่ " +$P{loanDate}+ "/"+$P{loanMonth}+"/"+ $P{loanYear}+"  ซึ่งต่อไปจะเรียกว่า \"สัญญา\" นั้น แต่ท่านปฏิบัติผิดนัดผิดสัญญาฯโดยแม้บริษัทฯ ได้บอก\nกล่าวให้ท่านแก้ไขการผิดนัดผิดสัญญาฯของท่านมาโดยตลอด ทั้งทางโทรศัพท์ การจัดส่งจดหมาย และอื่นๆในเวลาอัน\nเหมาะสมแล้วแต่ท่านยังคงเพิกเฉยและไม่มีการติดต่อกลับแต่ประการใด  บริษัทฯจึงจะขอแจ้งมายังท่านเป็นครั้งสุดท้ายขอให้\nท่านติดต่อกลับภายใน 3 วันหลังจากได้รับหนังสือฉบับนี้ และชำระยอดค้างให้เสร็จสิ้นทันที มิฉนั้นบริษัทมีความจำเป็นต้อง\nดำเนินการตามกฏหมายต่อไป\n\tเมื่อถูกดำเนินคดี  ท่านต้องรับผิดชอบค่าฤชารรมเนียมศาล ค่าทนายความ ค่าใช้จ่ายอื่นๆรวมทั้งเสียเวลาในระหว่าง\nการดำเนินคดีอีกด้วย\n\tอนึ่งบริษัทฯต้องขออภัยเป็นอย่างสูง หากท่านได้ชำระเงินไปก่อนได้รับหนังสือนี้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="ITTP" x="420" y="180" width="100" height="30" uuid="98da7db4-8e84-46d2-8655-3cc7ad254123"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ขอแสดงความนับถือ\nบริษัท ไอทีทีพี จำกัด"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="ITTP" x="40" y="0" width="60" height="15" uuid="a5af9045-c9bb-47a7-a44d-517c140e9ae3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[สัญญาเลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="ITTP" x="40" y="16" width="80" height="15" uuid="8e8e289e-a81a-4312-a57c-c5b438db2938"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ยอดหนี้ค้างชำระ]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="ITTP" x="136" y="16" width="54" height="15" uuid="40a6fcb5-12cf-440b-9282-27b30d9bfb5f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$P{totalPayment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="ITTP" x="136" y="0" width="79" height="15" uuid="82207299-913b-4159-9bc3-e72db65b5982"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{reportId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="ITTP" x="195" y="16" width="20" height="15" uuid="b0931a42-e9e0-4ad6-af70-559ab24e32b1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="ITTP" x="229" y="16" width="51" height="15" uuid="08c71bbf-5672-4475-89a8-695c99abee9a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ณ.  วันที่]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="ITTP" x="286" y="16" width="114" height="15" uuid="63469736-132e-4deb-9707-f79a9985c459"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{fromDate}+" "+$P{fromMonth}+" "+$P{fromYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="ITTP" x="229" y="0" width="114" height="15" forecolor="#000000" uuid="ab19ae94-9ee1-4f5a-859c-1e372304b782"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["วันค้างชำระ " + $P{indeptDay} + " วัน"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="171" splitType="Stretch">
+			<textField>
+				<reportElement style="ITTP" x="40" y="15" width="439" height="38" uuid="795665d5-75fe-4635-8791-25133d942709"/>
+				<textFieldExpression><![CDATA["ช่องทางการชำระเงิน สินเชื่อ บริษัท ไอทีทีพี จำกัด\nเพื่อให้ช่องทางการชำระเงินของท่านเป็นไปโดยสะดวก  และรวดเร็วยิ่งขึ้นท่านสามารถชำระตามช่องทางดังต่อไปนี้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="ITTP" x="40" y="61" width="335" height="50" uuid="91c48176-8f33-439b-83cd-43fa2a93a3ea"/>
+				<textFieldExpression><![CDATA["1. ชำระที่เคาน์เตอร์เซอร์วิสทุกสาขา      ค่าธรรมเนียม 15 บาท/ 1 รายการชำระ\n2. ชำระที่ธนาคารกรุงเทพ                ค่าธรรมเนียม 15 บาท/ 1 รายการชำระ\n3. ชำระที่ธนาคารออมสิน                 ค่าธรรมเนียม 15 บาท/ 1 รายการชำระ"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="403" y="59" width="141" height="55" uuid="5f719316-c43d-4b20-a801-1620e7b0d54d"/>
+			</rectangle>
+			<textField>
+				<reportElement style="ITTP" x="40" y="134" width="420" height="30" uuid="d532dcef-279d-492a-aaff-c452d8513d4d"/>
+				<textFieldExpression><![CDATA["หากมีข้อสงสัยประการใด\nท่านสามารถสอบถามได้ที่คุณสหชาติ  ศรีรัตนะ เบอร์ 02-8215724 ต่อ 3001 หรือ 064-9305404  , Line @ITTP2"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="198" splitType="Stretch">
+			<textField>
+				<reportElement style="ITTP" x="3" y="15" width="549" height="30" uuid="016e2e44-81d3-45a1-9c96-7248c1a05fd8"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["บริษัท  ไอทีทีพี จำกัด  183 ซอยลาดพร้าว 71 แขวงสะพานสอง เขตวังทองหลาง กรุงเทพมหานคร 10310\nITTP CO.,LTD.183 Soi Ladprao 71,Khet Wangthomg BangKok 10310 โทร 02-8215724 E-Mail:contact@ittp.co.th"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="3" y="7" width="548" height="1" backcolor="#000000" uuid="2f4dbbf9-55c7-481a-9951-5259f0fe3c2c"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+</jasperReport>

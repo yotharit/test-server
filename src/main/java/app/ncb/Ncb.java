@@ -1,294 +1,315 @@
 package app.ncb;
 
+
 public class Ncb {
 
-    private String Date;
-    private String Month;
-    private String Name;
-    private String AddressFirst;
-    private String AddressSecond;
-    private String Sex;
-    private int BirthDate;
-    private int BirthMonth;
-    private int BirthYear;
-    private String Marriage;
-    private String Id;
-    private String BankAccount;
-    private double Asset;
-    private int OpenAccountDate;
-    private int OpenAccountMonth;
-    private int OpenAccountYear;
-    private int CloseAccountDate;
-    private int CloseAccountMonth;
-    private int CloseAccountYear;
-    private int LatestAccountDate;
-    private int LatestAccountMonth;
-    private int LatestAccountYear;
-    private int MissedAccountDate;
-    private int MissedAccountMonth;
-    private int MissedAccountYear;
-    private int AccountStatus;
-    private String Category;
-    private String Type;
-    private double RemainingPayment;
-    private double MinPayment;
-    private double LatePaymentRemain;
-    private int LeftCount;
-
-    public String getMonth() {
-        return Month;
-    }
-
-    public void setMonth(String month) {
-        Month = month;
-    }
+    private String date;
+    private String month;
+    private String year;
+    private String name;
+    private String addressFirst;
+    private String addressSecond;
+    private String sex;
+    private int birthDate;
+    private int birthMonth;
+    private int birthYear;
+    private String marriage;
+    private String id;
+    private String bankAccount;
+    private double asset;
+    private int openAccountDate;
+    private int openAccountMonth;
+    private int openAccountYear;
+    private int closeAccountDate;
+    private int closeAccountMonth;
+    private int closeAccountYear;
+    private int latestAccountDate;
+    private int latestAccountMonth;
+    private int latestAccountYear;
+    private int missedAccountDate;
+    private int missedAccountMonth;
+    private int missedAccountYear;
+    private int accountStatus;
+    private String category;
+    private String type;
+    private double remainingPayment;
+    private double minPayment;
+    private double latePaymentRemain;
+    private int leftCount;
+    private String sendingEmail;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getAddressFirst() {
-        return AddressFirst;
+        return addressFirst;
     }
 
     public void setAddressFirst(String addressFirst) {
-        AddressFirst = addressFirst;
+        this.addressFirst = addressFirst;
     }
 
     public String getAddressSecond() {
-        return AddressSecond;
+        return addressSecond;
     }
 
     public void setAddressSecond(String addressSecond) {
-        AddressSecond = addressSecond;
+        this.addressSecond = addressSecond;
     }
 
     public String getSex() {
-        return Sex;
+        return sex;
     }
 
     public void setSex(String sex) {
-        Sex = sex;
+        this.sex = sex;
     }
 
     public int getBirthDate() {
-        return BirthDate;
+        return birthDate;
     }
 
     public void setBirthDate(int birthDate) {
-        BirthDate = birthDate;
+        this.birthDate = birthDate;
     }
 
     public int getBirthMonth() {
-        return BirthMonth;
+        return birthMonth;
     }
 
     public void setBirthMonth(int birthMonth) {
-        BirthMonth = birthMonth;
+        this.birthMonth = birthMonth;
     }
 
     public int getBirthYear() {
-        return BirthYear;
+        return birthYear;
     }
 
     public void setBirthYear(int birthYear) {
-        BirthYear = birthYear;
+        this.birthYear = birthYear;
     }
 
     public String getMarriage() {
-        return Marriage;
+        return marriage;
     }
 
     public void setMarriage(String marriage) {
-        Marriage = marriage;
+        this.marriage = marriage;
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getBankAccount() {
-        return BankAccount;
+        return bankAccount;
     }
 
     public void setBankAccount(String bankAccount) {
-        BankAccount = bankAccount;
+        this.bankAccount = bankAccount;
     }
 
     public double getAsset() {
-        return Asset;
+        return asset;
     }
 
     public void setAsset(double asset) {
-        Asset = asset;
+        this.asset = asset;
     }
 
     public int getOpenAccountDate() {
-        return OpenAccountDate;
+        return openAccountDate;
     }
 
     public void setOpenAccountDate(int openAccountDate) {
-        OpenAccountDate = openAccountDate;
+        this.openAccountDate = openAccountDate;
     }
 
     public int getOpenAccountMonth() {
-        return OpenAccountMonth;
+        return openAccountMonth;
     }
 
     public void setOpenAccountMonth(int openAccountMonth) {
-        OpenAccountMonth = openAccountMonth;
+        this.openAccountMonth = openAccountMonth;
     }
 
     public int getOpenAccountYear() {
-        return OpenAccountYear;
+        return openAccountYear;
     }
 
     public void setOpenAccountYear(int openAccountYear) {
-        OpenAccountYear = openAccountYear;
+        this.openAccountYear = openAccountYear;
     }
 
     public int getCloseAccountDate() {
-        return CloseAccountDate;
+        return closeAccountDate;
     }
 
     public void setCloseAccountDate(int closeAccountDate) {
-        CloseAccountDate = closeAccountDate;
+        this.closeAccountDate = closeAccountDate;
     }
 
     public int getCloseAccountMonth() {
-        return CloseAccountMonth;
+        return closeAccountMonth;
     }
 
     public void setCloseAccountMonth(int closeAccountMonth) {
-        CloseAccountMonth = closeAccountMonth;
+        this.closeAccountMonth = closeAccountMonth;
     }
 
     public int getCloseAccountYear() {
-        return CloseAccountYear;
+        return closeAccountYear;
     }
 
     public void setCloseAccountYear(int closeAccountYear) {
-        CloseAccountYear = closeAccountYear;
+        this.closeAccountYear = closeAccountYear;
     }
 
     public int getLatestAccountDate() {
-        return LatestAccountDate;
+        return latestAccountDate;
     }
 
     public void setLatestAccountDate(int latestAccountDate) {
-        LatestAccountDate = latestAccountDate;
+        this.latestAccountDate = latestAccountDate;
     }
 
     public int getLatestAccountMonth() {
-        return LatestAccountMonth;
+        return latestAccountMonth;
     }
 
     public void setLatestAccountMonth(int latestAccountMonth) {
-        LatestAccountMonth = latestAccountMonth;
+        this.latestAccountMonth = latestAccountMonth;
     }
 
     public int getLatestAccountYear() {
-        return LatestAccountYear;
+        return latestAccountYear;
     }
 
     public void setLatestAccountYear(int latestAccountYear) {
-        LatestAccountYear = latestAccountYear;
+        this.latestAccountYear = latestAccountYear;
     }
 
     public int getMissedAccountDate() {
-        return MissedAccountDate;
+        return missedAccountDate;
     }
 
     public void setMissedAccountDate(int missedAccountDate) {
-        MissedAccountDate = missedAccountDate;
+        this.missedAccountDate = missedAccountDate;
     }
 
     public int getMissedAccountMonth() {
-        return MissedAccountMonth;
+        return missedAccountMonth;
     }
 
     public void setMissedAccountMonth(int missedAccountMonth) {
-        MissedAccountMonth = missedAccountMonth;
+        this.missedAccountMonth = missedAccountMonth;
     }
 
     public int getMissedAccountYear() {
-        return MissedAccountYear;
+        return missedAccountYear;
     }
 
     public void setMissedAccountYear(int missedAccountYear) {
-        MissedAccountYear = missedAccountYear;
+        this.missedAccountYear = missedAccountYear;
     }
 
     public int getAccountStatus() {
-        return AccountStatus;
+        return accountStatus;
     }
 
     public void setAccountStatus(int accountStatus) {
-        AccountStatus = accountStatus;
+        this.accountStatus = accountStatus;
     }
 
     public String getCategory() {
-        return Category;
+        return category;
     }
 
     public void setCategory(String category) {
-        Category = category;
+        this.category = category;
     }
 
     public String getType() {
-        return Type;
+        return type;
     }
 
     public void setType(String type) {
-        Type = type;
+        this.type = type;
     }
 
     public double getRemainingPayment() {
-        return RemainingPayment;
+        return remainingPayment;
     }
 
     public void setRemainingPayment(double remainingPayment) {
-        RemainingPayment = remainingPayment;
+        this.remainingPayment = remainingPayment;
     }
 
     public double getMinPayment() {
-        return MinPayment;
+        return minPayment;
     }
 
     public void setMinPayment(double minPayment) {
-        MinPayment = minPayment;
+        this.minPayment = minPayment;
     }
 
     public double getLatePaymentRemain() {
-        return LatePaymentRemain;
+        return latePaymentRemain;
     }
 
     public void setLatePaymentRemain(double latePaymentRemain) {
-        LatePaymentRemain = latePaymentRemain;
+        this.latePaymentRemain = latePaymentRemain;
     }
 
     public int getLeftCount() {
-        return LeftCount;
+        return leftCount;
     }
 
     public void setLeftCount(int leftCount) {
-        LeftCount = leftCount;
+        this.leftCount = leftCount;
     }
 
+
+
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getSendingEmail() {
+        return sendingEmail;
+    }
+
+    public void setSendingEmail(String sendingEmail) {
+        this.sendingEmail = sendingEmail;
     }
 
 }

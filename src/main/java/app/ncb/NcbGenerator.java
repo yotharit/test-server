@@ -19,7 +19,8 @@ public class NcbGenerator {
         return instance;
     }
 
-    public byte[] generateNcbPdf() throws JRException, IOException {
+    public byte[] generateNcbPdf(Ncb ncb) throws JRException, IOException {
+
 
         byte[] bytes = null;
 
@@ -30,6 +31,14 @@ public class NcbGenerator {
 
         report = JasperCompileManager.compileReport(ConfigProperty.getInstance().getTemplateNcb());
         parameters = new HashMap<String, Object>();
+        parameters.put("date", ncb.getDate());
+        parameters.put("month", ncb.getMonth());
+        parameters.put("year", ncb.getYear());
+        parameters.put("name", ncb.getName());
+
+
+        System.out.println(ncb.getDate() + ncb.getName());
+        parameters.put("ImageUrl", ConfigProperty.getInstance().getHeader());
 
         dataSource = new JREmptyDataSource();
         jasperPrint = JasperFillManager.fillReport(report, parameters, dataSource);

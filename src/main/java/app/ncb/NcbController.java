@@ -1,30 +1,26 @@
 package app.ncb;
 
+import app.Mail.EmailServiceImpl;
 import config.ConfigProperty;
+
 import net.sf.jasperreports.engine.JRException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
 @RestController
 public class NcbController {
 
-    @RequestMapping("/ncb")
-    public String ncbIndex() throws IOException {
-        ConfigProperty config = ConfigProperty.getInstance();
-        return String.format("Resources Using for NCB Report templateNcb = %s fileLocation = %s", config.getTemplateNcb(), config.getHeader());
-    }
-
-    @RequestMapping(name = "/ncb/gen", method = RequestMethod.GET)
-    public ResponseEntity<byte[]> index() throws JRException, IOException {
+    @RequestMapping(value = "/ncb/pdf",method = RequestMethod.POST)
+    public ResponseEntity<byte[]> generatePdf(@RequestBody Ncb ncb) throws JRException, IOException {
 
         NcbGenerator generator = NcbGenerator.getInstance().getInstance();
         byte[] out = null;
 
-        out = generator.generateNcbPdf();
+        out = generator.generateNcbPdf(ncb);
 
         return ResponseEntity
                 .ok()
@@ -33,6 +29,23 @@ public class NcbController {
                 // Tell browser to display PDF if it can
                 .header("Content-Disposition", "inline; filename=\"" + "ncb" + ".pdf\"")
                 .body(out);
+    }
+
+    @RequestMapping(value = "/ncb/email",method = RequestMethod.POST)
+    public String generateEmail(@RequestBody Ncb ncb) throws JRException, IOException {
+
+        NcbGenerator generator = NcbGenerator.getInstance().getInstance();
+        byte[] out = null;
+
+        if(ncb.getSendingEmail() != null){
+            out = generator.generateNcbPdf(ncb);
+            EmailServiceImpl emailService = new EmailServiceImpl();
+            emailService.sendMessageWithAttachment(ncb.getSendingEmail(),"NCB-Email","Test NCB SENDING","ncb.pdf",out);
+
+            return "Email Sent to : " + ncb.getSendingEmail();
+        }
+        else
+            return "Did not sent the Email!";
     }
 
 }

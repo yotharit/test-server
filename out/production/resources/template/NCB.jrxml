@@ -50,9 +50,9 @@
 	<parameter name="CloseAccountDate" class="java.lang.String"/>
 	<parameter name="CloseAccountYear" class="java.lang.String"/>
 	<parameter name="CloseAccountMonth" class="java.lang.String"/>
-	<parameter name="LastestPaymentDate" class="java.lang.String"/>
-	<parameter name="LastestPaymentYear" class="java.lang.String"/>
-	<parameter name="LastestPaymentMonth" class="java.lang.String"/>
+	<parameter name="LatestPaymentDate" class="java.lang.String"/>
+	<parameter name="LatestPaymentYear" class="java.lang.String"/>
+	<parameter name="LatestPaymentMonth" class="java.lang.String"/>
 	<parameter name="MissedPaymentDate" class="java.lang.String"/>
 	<parameter name="MissedPaymentYear" class="java.lang.String"/>
 	<parameter name="MissedPaymentMonth" class="java.lang.String"/>
@@ -264,14 +264,14 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="Kanit"/>
 				</textElement>
-				<textFieldExpression><![CDATA["วันที่ปิดบัญชี : " + $P{CloseAccountDate} + " " + $P{CloseAccountMonth} + " " +$P{LastestPaymentYear}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["วันที่ปิดบัญชี : " + $P{CloseAccountDate} + " " + $P{CloseAccountMonth} + " " +$P{LatestPaymentYear}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="ITTP" x="40" y="544" width="220" height="17" uuid="3c08bc7b-daf3-4061-a308-b67b76fb5356"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Kanit"/>
 				</textElement>
-				<textFieldExpression><![CDATA["วันที่ชำระหนี้ล่าสุด : " + $P{LastestPaymentDate} + " " + $P{LastestPaymentMonth} + " "+$P{LastestPaymentYear}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["วันที่ชำระหนี้ล่าสุด : " + $P{LatestPaymentDate} + " " + $P{LatestPaymentMonth} + " "+$P{LatestPaymentYear}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="ITTP" x="40" y="561" width="220" height="17" uuid="8fa4f4dd-30b5-4183-a57a-f8cd01c9b4a9"/>

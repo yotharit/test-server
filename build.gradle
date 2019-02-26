@@ -30,7 +30,8 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     
     //jasper
-    compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.7.0'
+    compile group: 'commons-digester', name: 'commons-digester', version: '2.1'
+    compile group: 'org.apache.ant', name: 'ant', version: '1.10.5'
     compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
     compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.2'
     compile group: 'org.apache.commons', name: 'commons-digester3', version: '3.2'
@@ -46,5 +47,8 @@ dependencies {
     compile group: 'com.lowagie', name: 'itext', version: '2.1.7'
     compile group: 'net.sourceforge.barbecue', name: 'barbecue', version: '1.5-beta1'
     testCompile group: 'com.itextpdf', name: 'itext-pdfa', version: '5.5.13'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '2.1.2.RELEASE'
+
 }
 
