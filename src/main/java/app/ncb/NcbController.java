@@ -1,11 +1,8 @@
 package app.ncb;
 
-import app.Mail.EmailServiceImpl;
-import config.ConfigProperty;
+import app.mail.EmailServiceImpl;
 
 import net.sf.jasperreports.engine.JRException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

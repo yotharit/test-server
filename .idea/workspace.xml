@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2afaa270-cf4e-49e2-a0a2-c51fea26189b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/classes/app/notice/Notice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeGen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/notice/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/notice/NoticeRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/server.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/app/Mail/AppMailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/Mail/AppMailSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/app/Mail/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/Mail/EmailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/app/Mail/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/Mail/EmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/app/ncb/NcbGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/ncb/NcbGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/config/ConfigProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/config/ConfigProperty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jasperreports-chart-customizers-6.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jasperreports-chart-themes-6.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jasperreports-custom-visualization-6.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jasperreports-functions-6.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jasperreports-javaflow-6.7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/kanit.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ncb/NcbGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ncb/NcbGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/ConfigProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ConfigProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/N1.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/template/N1.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/N2.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/template/N2.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/N3.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/template/N3.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/N4.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/template/N4.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/N5.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/template/N5.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/app/ncb/NcbController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/ncb/NcbController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeGen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/app/notice/NoticeGen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Mail/AppMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mail/AppMailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Mail/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mail/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Mail/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mail/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/ncb/NcbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ncb/NcbController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/notice/NoticeRequet.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -46,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="312">
+              <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,30 +49,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+            <state relative-caret-position="219">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getInstance#0;class#NoticeGen#0" />
+                <element signature="method#generateMultiplePage#0;class#NoticeGen#0" />
                 <element signature="e#977#990#0" expanded="true" />
+                <element signature="method#generateSingleNoticePdf#0;class#NoticeGen#0" />
+                <element signature="method#injectParameter#0;class#NoticeGen#0" />
+                <element signature="method#getReportType#0;class#NoticeGen#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeRequet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/java/io/File.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20114">
-              <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -92,9 +67,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/Notice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+            <state relative-caret-position="-326">
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
               <folding>
+                <element signature="e#1111#1112#0" expanded="true" />
                 <element signature="e#1143#1144#0" expanded="true" />
                 <element signature="e#1193#1194#0" expanded="true" />
                 <element signature="e#1235#1236#0" expanded="true" />
@@ -151,9 +127,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/template/N2.jrxml" />
         <option value="$PROJECT_DIR$/src/main/java/app/notice/Notice.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeRequet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java" />
       </list>
     </option>
   </component>
@@ -219,15 +197,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Mail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
@@ -325,7 +294,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551557775947" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551560697046" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -404,18 +373,18 @@
       <workItem from="1551165811083" duration="375000" />
       <workItem from="1551341294977" duration="6903000" />
       <workItem from="1551430595073" duration="754000" />
-      <workItem from="1551524055716" duration="16224000" />
+      <workItem from="1551524055716" duration="18135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59544000" />
+    <option name="totallyTimeSpent" value="61455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28898427" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28898427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -426,7 +395,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.46506023" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4899857" visible="true" weight="0.3325301" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4899857" visible="true" weight="0.3325301" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49785408" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,7 +485,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/Mail/JavaMailSenderImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/Mail/MailController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Mail/AppMailSender.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mail/AppMailSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
@@ -533,7 +502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Mail/EmailServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mail/EmailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
@@ -543,7 +512,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Mail/EmailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mail/EmailService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
@@ -678,20 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/Notice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#3016#3017#0" expanded="true" />
-            <element signature="e#3047#3048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -699,16 +654,6 @@
           <folding>
             <element signature="e#169#170#0" expanded="true" />
             <element signature="e#206#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -734,21 +679,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#977#990#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeRequet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/Notice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="-326">
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#3016#3017#0" expanded="true" />
+            <element signature="e#3047#3048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#NoticeGen#0" />
+            <element signature="method#generateMultiplePage#0;class#NoticeGen#0" />
+            <element signature="e#977#990#0" expanded="true" />
+            <element signature="method#generateSingleNoticePdf#0;class#NoticeGen#0" />
+            <element signature="method#injectParameter#0;class#NoticeGen#0" />
+            <element signature="method#getReportType#0;class#NoticeGen#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

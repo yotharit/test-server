@@ -58,7 +58,6 @@ public class NoticeGen {
 
         bytes = out.toByteArray();
 
-//        bytes = JasperExportManager.exportReportToPdf(jasperPrint);
         return bytes;
     }
 

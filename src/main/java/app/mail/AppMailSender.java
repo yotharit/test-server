@@ -1,4 +1,4 @@
-package app.Mail;
+package app.mail;
 
 
 import org.springframework.context.annotation.Bean;

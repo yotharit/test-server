@@ -1,6 +1,6 @@
 package app.notice;
 
-import app.Mail.EmailServiceImpl;
+import app.mail.EmailServiceImpl;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -32,17 +35,24 @@ public class NoticeController {
     }
 
     @RequestMapping(value = "/notice/email",method = RequestMethod.POST)
-    public String generateEmail(@RequestBody Notice notice) throws JRException, IOException {
+    public String generateEmail(@RequestBody NoticeRequest request) throws JRException, IOException {
 
         NoticeGen generator = NoticeGen.getInstance().getInstance();
         byte[] out = null;
 
-        if(notice.getEmail() != null){
-            out = generator.generateSingleNoticePdf(notice);
+        if(request.getEmail() != null){
+            out = generator.generateMultiplePage(request.getNotice());
             EmailServiceImpl emailService = new EmailServiceImpl();
-            emailService.sendMessageWithAttachment(notice.getEmail(),"จดหมายติดตามหนี้","ติดตามทวงหนี้","จดหมายติดตามหนี้.pdf",out);
+            Date today = Calendar.getInstance().getTime();
+            SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
 
-            return "Email Sent to : " + notice.getEmail();
+
+            emailService.sendMessageWithAttachment(request.getEmail(),
+                    "จดหมายติดตามหนี้ " + formater.format(today),
+                    "ติดตามทวงหนี้",
+                    "report-"+formater.format(today)+".pdf",out);
+
+            return "Email Sent to : " + request.getEmail();
         }
         else
             return "Did not sent the Email!";
@@ -63,6 +73,5 @@ public class NoticeController {
                 .header("Content-Disposition", "inline; filename=\"" + "report" + ".pdf\"")
                 .body(out);
     }
-
 
 }
