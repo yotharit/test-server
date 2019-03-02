@@ -38,7 +38,7 @@ public class NcbGenerator {
 
 
         System.out.println(ncb.getDate() + ncb.getName());
-        parameters.put("ImageUrl", ConfigProperty.getInstance().getHeader());
+        parameters.put("imageUrl", ConfigProperty.getInstance().getHeader());
 
         dataSource = new JREmptyDataSource();
         jasperPrint = JasperFillManager.fillReport(report, parameters, dataSource);

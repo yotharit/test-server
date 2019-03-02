@@ -22,6 +22,52 @@ public class ConfigProperty {
 
     private String header;
     private String templateNcb;
+    private String templateN1;
+    private String templateN2;
+    private String templateN3;
+    private String templateN4;
+    private String templateN5;
+
+    public String getTemplateN1() {
+        return templateN1;
+    }
+
+    public void setTemplateN1(String templateN1) {
+        this.templateN1 = templateN1;
+    }
+
+    public String getTemplateN2() {
+        return templateN2;
+    }
+
+    public void setTemplateN2(String templateN2) {
+        this.templateN2 = templateN2;
+    }
+
+    public String getTemplateN3() {
+        return templateN3;
+    }
+
+    public void setTemplateN3(String templateN3) {
+        this.templateN3 = templateN3;
+    }
+
+    public String getTemplateN4() {
+        return templateN4;
+    }
+
+    public void setTemplateN4(String templateN4) {
+        this.templateN4 = templateN4;
+    }
+
+    public String getTemplateN5() {
+        return templateN5;
+    }
+
+    public void setTemplateN5(String templateN5) {
+        this.templateN5 = templateN5;
+    }
+
     private InputStream inputStream;
 
 
@@ -56,6 +102,11 @@ public class ConfigProperty {
 
             header = prop.getProperty("header");
             templateNcb = prop.getProperty("templateNcb");
+            templateN1 = prop.getProperty("templateN1");
+            templateN2 = prop.getProperty("templateN2");
+            templateN3 = prop.getProperty("templateN3");
+            templateN4 = prop.getProperty("templateN4");
+            templateN5 = prop.getProperty("templateN5");
 
 
         } catch (Exception e) {

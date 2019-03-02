@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="N2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f2efbce-7b66-4785-bfa5-40a3c15ec5ad">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<property name="net.sf.jasperreports.export.pdf.glyph.renderer.blocks.x" value="thai"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="ITTP" fontName="Kanit"/>
 	<style name="Color1" mode="Opaque" backcolor="#FFFF00" fontName="Kanit"/>
 	<parameter name="imageUrl" class="java.lang.String"/>
@@ -17,8 +17,10 @@
 	<parameter name="dueMonth" class="java.lang.String"/>
 	<parameter name="dueYear" class="java.lang.String"/>
 	<parameter name="minPayment" class="java.lang.Double"/>
-	<parameter name="Payment" class="java.lang.Double"/>
-	<parameter name="dueMonthText" class="java.lang.String"/>
+	<parameter name="totalLoan" class="java.lang.Double"/>
+	<parameter name="loanDate" class="java.lang.String"/>
+	<parameter name="loanMonth" class="java.lang.String"/>
+	<parameter name="loanYear" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -43,18 +45,9 @@
 				<textFieldExpression><![CDATA["กรุณาส่ง\n" + $P{address1} + "\n" + $P{address2}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="" style="Color1" positionType="Float" stretchType="RelativeToBandHeight" x="414" y="50" width="108" height="10" isRemoveLineWhenBlank="true" uuid="bfc1162b-d1fa-4556-8105-f9b25ab8a0b5">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
-				</reportElement>
-				<box topPadding="0" leftPadding="0">
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFF00"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFF00"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFF00"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFF00"/>
-				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA["วันที่ " + $P{reportDate} + " " + $P{reportMonth} + " " + $P{reportYear}]]></textFieldExpression>
+				<reportElement key="" style="ITTP" positionType="Float" stretchType="RelativeToBandHeight" x="414" y="50" width="108" height="10" isRemoveLineWhenBlank="true" uuid="bfc1162b-d1fa-4556-8105-f9b25ab8a0b5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["<style backcolor='#FFFF00'>วันที่ " + $P{reportDate} + " " + $P{reportMonth} + " " + $P{reportYear}+"</style>"]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
@@ -71,7 +64,7 @@
 		<band height="226" splitType="Stretch">
 			<textField>
 				<reportElement style="ITTP" x="40" y="10" width="504" height="30" uuid="a317a6f2-ec5b-46eb-9095-9730dce70997"/>
-				<textFieldExpression><![CDATA["\tตามที่ท่านได้กู้เงินจากบริษัท ไอทีทีพี จำกัด จำนวนเงิน " + $P{Payment} + " บาท เมื่อวันที่ " + $P{dueDate} +"/" + $P{dueMonth} + "/" + $P{dueYear} +"  บัดนี้บัญชีของท่านมียอดค้างชำระ ตามรายละเอียดดังนี้"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["\tตามที่ท่านได้กู้เงินจากบริษัท ไอทีทีพี จำกัด จำนวนเงิน " + $P{totalLoan} + " บาท เมื่อวันที่ " + $P{loanDate} +"/" + $P{loanMonth} + "/" + $P{loanYear} +"  บัดนี้บัญชีของท่าน\nมียอดค้างชำระ ตามรายละเอียดดังนี้"]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="40" y="40" width="126" height="29" uuid="29aee06b-14bd-49b8-9ba9-e4975d267d56"/>
@@ -144,7 +137,7 @@
 			<textField>
 				<reportElement style="ITTP" x="429" y="70" width="100" height="27" forecolor="#FF2A2A" uuid="3cca0622-246a-4dcd-b89d-5277137f7149"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{dueDate} + " " + $P{dueMonthText} + " " + $P{dueYear}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{dueDate} + " " + $P{dueMonth} + " " + $P{dueYear}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

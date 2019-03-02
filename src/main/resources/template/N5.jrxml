@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="N5" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e60a8c5-1fa9-4a32-ae8c-5fb06349faa7">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<property name="net.sf.jasperreports.export.pdf.glyph.renderer.blocks.x" value="thai"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="ITTP" fontName="Kanit"/>
 	<parameter name="imageUrl" class="java.lang.String"/>
 	<parameter name="name" class="java.lang.String"/>
@@ -58,7 +58,7 @@
 			<textField>
 				<reportElement key="" style="ITTP" x="40" y="10" width="290" height="30" uuid="f89c229d-2e7a-4aff-9ff0-1606ec170dae"/>
 				<textElement textAlignment="Left" verticalAlignment="Top"/>
-				<textFieldExpression><![CDATA["เรื่อง    	ขอแจ้งยอดเงินค้างชำระ+\nอ้างถึง	สินเชื่อนาโนไฟแนนซ์ บริษัท ไอทีทีพี จำกัด "]]></textFieldExpression>
+				<textFieldExpression><![CDATA["เรื่อง    	ขอแจ้งยอดเงินค้างชำระ\nอ้างถึง	สินเชื่อนาโนไฟแนนซ์ บริษัท ไอทีทีพี จำกัด "]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>

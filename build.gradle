@@ -38,13 +38,11 @@ dependencies {
     compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
     compile group: 'org.codehaus.castor', name: 'castor-xml', version: '1.4.1'
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.4', ext: 'pom'
-    compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13'
     compile group: 'com.ibm.icu', name: 'icu4j', version: '63.1'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.7'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
     compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13'
-    compile group: 'com.lowagie', name: 'itext', version: '2.1.7'
     compile group: 'net.sourceforge.barbecue', name: 'barbecue', version: '1.5-beta1'
     testCompile group: 'com.itextpdf', name: 'itext-pdfa', version: '5.5.13'
 
