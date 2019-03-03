@@ -81,10 +81,9 @@ public class NoticeGen {
     private HashMap<String, Object> injectParameter(Notice notice) throws IOException {
         HashMap<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("imageUrl", ConfigProperty.getInstance().getHeader());
-        parameters.put("name", notice.getName());
         parameters.put("reportId", notice.getReportId());
-        String address1 = String.format("%s %s %s", notice.getBuilding(), notice.getHouseId(), notice.getSoi());
-        String address2 = String.format("%s %s %s %s %s", notice.getRoad(), notice.getTambol(), notice.getAmphoe(), notice.getDistrict(), notice.getPostId());
+        String address1 = String.format("%s %s %s %s", notice.getBuilding(), notice.getHouseId(), notice.getSoi(),notice.getRoad());
+        String address2 = String.format("%s %s %s %s",  notice.getTambol(), notice.getAmphoe(), notice.getDistrict(), notice.getPostId());
         parameters.put("address1", address1);
         parameters.put("address2", address2);
         parameters.put("dueDate", notice.getDueDate().toString());

@@ -17,36 +17,29 @@ import java.util.List;
 @RestController
 public class NoticeController {
 
-    @RequestMapping(value = "/notice/pdf",method = RequestMethod.POST)
-    public ResponseEntity<byte[]> generatePdf(@RequestBody Notice notice) throws JRException, IOException {
-
-        NoticeGen generator = NoticeGen.getInstance().getInstance();
-        byte[] out = null;
-
-        out = generator.generateSingleNoticePdf(notice);
-
-        return ResponseEntity
-                .ok()
-                // Specify content type as PDF
-                .header("Content-Type", "application/pdf; charset=UTF-8")
-                // Tell browser to display PDF if it can
-                .header("Content-Disposition", "inline; filename=\"" + notice.getNoticeType() + ".pdf\"")
-                .body(out);
-    }
+//    @RequestMapping(value = "/notice/single/pdf",method = RequestMethod.POST)
+//    public ResponseEntity<byte[]> generatePdf(@RequestBody Notice notice) throws JRException, IOException {
+//        NoticeGen generator = NoticeGen.getInstance().getInstance();
+//        byte[] out = null;
+//        out = generator.generateSingleNoticePdf(notice);
+//        return ResponseEntity
+//                .ok()
+//                // Specify content type as PDF
+//                .header("Content-Type", "application/pdf; charset=UTF-8")
+//                // Tell browser to display PDF if it can
+//                .header("Content-Disposition", "inline; filename=\"" + notice.getNoticeType() + ".pdf\"")
+//                .body(out);
+//    }
 
     @RequestMapping(value = "/notice/email",method = RequestMethod.POST)
     public String generateEmail(@RequestBody NoticeRequest request) throws JRException, IOException {
-
         NoticeGen generator = NoticeGen.getInstance().getInstance();
         byte[] out = null;
-
         if(request.getEmail() != null){
             out = generator.generateMultiplePage(request.getNotice());
             EmailServiceImpl emailService = new EmailServiceImpl();
             Date today = Calendar.getInstance().getTime();
             SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
-
-
             emailService.sendMessageWithAttachment(request.getEmail(),
                     "จดหมายติดตามหนี้ " + formater.format(today),
                     "ติดตามทวงหนี้",
@@ -58,12 +51,11 @@ public class NoticeController {
             return "Did not sent the Email!";
     }
 
-    @RequestMapping(value = "/notice/multiple/pdf",method = RequestMethod.POST)
-    public ResponseEntity<byte[]> generateFromArray(@RequestBody List<Notice> noticeResponse) throws JRException, IOException {
-
+    @RequestMapping(value = "/notice/pdf",method = RequestMethod.POST)
+    public ResponseEntity<byte[]> generateFromArray(@RequestBody NoticeRequest request) throws JRException, IOException {
         byte[] out = null;
         NoticeGen generator = NoticeGen.getInstance().getInstance();
-        out = generator.generateMultiplePage(noticeResponse);
+        out = generator.generateMultiplePage(request.getNotice());
 
         return ResponseEntity
                 .ok()
@@ -73,5 +65,4 @@ public class NoticeController {
                 .header("Content-Disposition", "inline; filename=\"" + "report" + ".pdf\"")
                 .body(out);
     }
-
 }
