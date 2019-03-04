@@ -3,7 +3,6 @@ package app.notice;
 import config.ConfigProperty;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
-import net.sf.jasperreports.export.ExporterInput;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
@@ -14,6 +13,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class NoticeGen {
 
@@ -35,15 +38,48 @@ public class NoticeGen {
         byte[] bytes = null;
 
         List<JasperPrint> jasperPrints = new ArrayList<JasperPrint>();
+        List<ReportThread> threadList = new ArrayList<>();
 
-        //generate jasper print from array of response
-        for (Notice notice : noticeResponse) {
-            JRDataSource dataSource = new JREmptyDataSource();
-            String noticeUrl = getReportType(notice);
-            JasperReport report = JasperCompileManager.compileReport(noticeUrl);
-            Map<String, Object> parameters = injectParameter(notice);
-            JasperPrint print = JasperFillManager.fillReport(report, parameters, dataSource);
-            jasperPrints.add(print);
+        int threadPoolSize = 5;
+        int size = noticeResponse.size();
+        double divided = Math.ceil(size / threadPoolSize);
+
+        int count = 0;
+        for(int i = 0; i<threadPoolSize ;i++){
+            if(count+divided<=size){
+                List<Notice> notices = new ArrayList();
+                ReportThread thread = new ReportThread();
+                for(int j = 0; j<divided; j++){
+                    notices.add(noticeResponse.get(count));
+                    count++;
+                }
+                thread.setNoticeResponse(notices);
+                thread.setJasperPrintList(jasperPrints);
+                threadList.add(thread);
+                System.out.println("add to thread list");
+            }
+            else {
+                List<Notice> notices = new ArrayList();
+                ReportThread thread = new ReportThread();
+                for(i=0; i<size-count;i++){
+                    notices.add(noticeResponse.get(count));
+                    count++;
+                }
+                thread.setNoticeResponse(notices);
+                thread.setJasperPrintList(jasperPrints);
+                threadList.add(thread);
+                System.out.println("add to thread list");
+            }
+        }
+        ExecutorService executorService = Executors.newFixedThreadPool(threadPoolSize);
+        for(ReportThread thread : threadList){
+            executorService.submit(thread);
+        }
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException e) {
+            System.out.println(e.toString());
         }
 
         //export as byte array
@@ -82,8 +118,8 @@ public class NoticeGen {
         HashMap<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("imageUrl", ConfigProperty.getInstance().getHeader());
         parameters.put("reportId", notice.getReportId());
-        String address1 = String.format("%s %s %s %s", notice.getBuilding(), notice.getHouseId(), notice.getSoi(),notice.getRoad());
-        String address2 = String.format("%s %s %s %s",  notice.getTambol(), notice.getAmphoe(), notice.getDistrict(), notice.getPostId());
+        String address1 = String.format("%s %s %s %s", notice.getBuilding(), notice.getHouseId(), notice.getSoi(), notice.getRoad());
+        String address2 = String.format("%s %s %s %s", notice.getTambol(), notice.getAmphoe(), notice.getDistrict(), notice.getPostId());
         parameters.put("address1", address1);
         parameters.put("address2", address2);
         parameters.put("dueDate", notice.getDueDate().toString());
@@ -133,4 +169,45 @@ public class NoticeGen {
         }
         return noticeUrl;
     }
+
+    private class ReportThread extends Thread {
+
+        List<JasperPrint> jasperPrintList;
+        List<Notice> noticeResponse;
+
+        public List<JasperPrint> getJasperPrintList() {
+            return jasperPrintList;
+        }
+
+        public void setJasperPrintList(List<JasperPrint> jasperPrintList) {
+            this.jasperPrintList = jasperPrintList;
+        }
+
+        public List<Notice> getNoticeResponse() {
+            return noticeResponse;
+        }
+
+        public void setNoticeResponse(List<Notice> noticeResponse) {
+            this.noticeResponse = noticeResponse;
+        }
+
+        public void run() {
+            try {
+                //generate jasper print from array of response
+                System.out.println("Thread Created");
+                for (Notice notice : noticeResponse) {
+                    JRDataSource dataSource = new JREmptyDataSource();
+                    String noticeUrl = getReportType(notice);
+                    JasperReport report = JasperCompileManager.compileReport(noticeUrl);
+                    Map<String, Object> parameters = injectParameter(notice);
+                    JasperPrint print = JasperFillManager.fillReport(report, parameters, dataSource);
+                    jasperPrintList.add(print);
+                    System.out.println(jasperPrintList.size());
+                }
+            } catch (Exception e) {
+                System.out.println("Exception is caught");
+            }
+        }
+    }
+
 }
