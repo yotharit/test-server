@@ -205,7 +205,7 @@ public class NoticeGen {
                     System.out.println(jasperPrintList.size());
                 }
             } catch (Exception e) {
-                System.out.println("Exception is caught");
+                System.out.println(e.toString());
             }
         }
     }

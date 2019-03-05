@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state relative-caret-position="324">
+              <caret line="207" column="47" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -254,7 +254,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551773209654" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551773321514" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -337,12 +337,12 @@
       <workItem from="1551524055716" duration="25378000" />
       <workItem from="1551624907277" duration="18000" />
       <workItem from="1551625000089" duration="8321000" />
-      <workItem from="1551769447970" duration="962000" />
+      <workItem from="1551769447970" duration="1018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77999000" />
+    <option name="totallyTimeSpent" value="78055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -683,8 +683,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/notice/NoticeGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="324">
+          <caret line="207" column="47" selection-start-line="207" selection-start-column="47" selection-end-line="207" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
