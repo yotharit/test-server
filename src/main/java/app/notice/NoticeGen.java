@@ -56,7 +56,6 @@ public class NoticeGen {
                 thread.setNoticeResponse(notices);
                 thread.setJasperPrintList(new ArrayList<>());
                 threadList.add(thread);
-                System.out.println("add to thread list");
             }
             else {
                 List<Notice> notices = new ArrayList();
@@ -68,7 +67,6 @@ public class NoticeGen {
                 thread.setNoticeResponse(notices);
                 thread.setJasperPrintList(jasperPrints);
                 threadList.add(thread);
-//                System.out.println("add to thread list");
             }
         }
         ExecutorService executorService = Executors.newFixedThreadPool(threadPoolSize);
@@ -81,10 +79,12 @@ public class NoticeGen {
         } catch (InterruptedException e) {
             System.out.println(e.toString());
         }
+        System.out.println("Finish generating Jasper print");
 
         for(ReportThread thread : threadList) {
             jasperPrints.addAll(thread.jasperPrintList);
         }
+        System.out.println("Finish concat");
 
         //export as byte array
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -180,6 +180,8 @@ public class NoticeGen {
         List<JasperPrint> jasperPrintList;
         List<Notice> noticeResponse;
 
+
+
         public List<JasperPrint> getJasperPrintList() {
             return jasperPrintList;
         }
@@ -207,7 +209,7 @@ public class NoticeGen {
                     Map<String, Object> parameters = injectParameter(notice);
                     JasperPrint print = JasperFillManager.fillReport(report, parameters, dataSource);
                     jasperPrintList.add(print);
-//                    System.out.println(jasperPrintList.size());
+                    System.out.println(this.getName()+"-Thread : "+ jasperPrintList.size()+"/"+noticeResponse.size());
                 }
             } catch (Exception e) {
                 System.out.println(e.toString());
