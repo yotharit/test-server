@@ -69,6 +69,8 @@ public class NoticeGen {
                 threadList.add(thread);
             }
         }
+
+        System.out.println("Start execute thread");
         ExecutorService executorService = Executors.newFixedThreadPool(threadPoolSize);
         for(ReportThread thread : threadList){
             executorService.submit(thread);
@@ -201,7 +203,6 @@ public class NoticeGen {
         public void run() {
             try {
                 //generate jasper print from array of response
-                System.out.println("Thread Created");
                 for (Notice notice : noticeResponse) {
                     JRDataSource dataSource = new JREmptyDataSource();
                     String noticeUrl = getReportType(notice);
