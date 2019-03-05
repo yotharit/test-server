@@ -27,6 +27,15 @@ public class ConfigProperty {
     private String templateN3;
     private String templateN4;
     private String templateN5;
+    private int threadPoolSize;
+
+    public int getThreadPoolSize() {
+        return threadPoolSize;
+    }
+
+    public void setThreadPoolSize(int threadPoolSize) {
+        this.threadPoolSize = threadPoolSize;
+    }
 
     public String getTemplateN1() {
         return templateN1;
@@ -107,6 +116,7 @@ public class ConfigProperty {
             templateN3 = prop.getProperty("templateN3");
             templateN4 = prop.getProperty("templateN4");
             templateN5 = prop.getProperty("templateN5");
+            threadPoolSize = Integer.parseInt(prop.getProperty("threadPoolSize"));
 
 
         } catch (Exception e) {
