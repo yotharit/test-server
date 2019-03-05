@@ -40,7 +40,7 @@ public class NoticeGen {
         List<JasperPrint> jasperPrints = new ArrayList<JasperPrint>();
         List<ReportThread> threadList = new ArrayList<>();
 
-        int threadPoolSize = 3;
+        int threadPoolSize = 5;
         int size = noticeResponse.size();
         double divided = Math.ceil(size / threadPoolSize);
 
