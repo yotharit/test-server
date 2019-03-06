@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
+//TODO - Fix this
 public class NoticeGen {
 
 
@@ -46,7 +46,7 @@ public class NoticeGen {
 
         int count = 0;
         for(int i = 0; i<threadPoolSize ;i++){
-            if(count+divided<=size){
+            if(i!=threadPoolSize-1){
                 List<Notice> notices = new ArrayList();
                 ReportThread thread = new ReportThread();
                 for(int j = 0; j<divided; j++){
@@ -60,12 +60,12 @@ public class NoticeGen {
             else {
                 List<Notice> notices = new ArrayList();
                 ReportThread thread = new ReportThread();
-                for(i=0; i<size-count;i++){
+                for(i=0; count<size;i++){
                     notices.add(noticeResponse.get(count));
                     count++;
                 }
                 thread.setNoticeResponse(notices);
-                thread.setJasperPrintList(jasperPrints);
+                thread.setJasperPrintList(new ArrayList<>());
                 threadList.add(thread);
             }
         }
@@ -83,10 +83,15 @@ public class NoticeGen {
         }
         System.out.println("Finish generating Jasper print");
 
+        System.out.println("Size : "+jasperPrints.size());
+
         for(ReportThread thread : threadList) {
             jasperPrints.addAll(thread.jasperPrintList);
         }
         System.out.println("Finish concat");
+
+        System.out.println("Size : "+jasperPrints.size());
+
 
         //export as byte array
         ByteArrayOutputStream out = new ByteArrayOutputStream();
